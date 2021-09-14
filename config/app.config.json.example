@@ -1,0 +1,5 @@
+{
+  "jwtSecret": "",
+  "jwtAlgo": "HS256",
+  "jwtExpire": 3600
+}

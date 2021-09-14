@@ -1,0 +1,39 @@
+{
+  "name": "thc-challenge-ui-api",
+  "version": "1.0.0",
+  "description": "REST api for THC frontend challenge",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "format": "standard --fix",
+    "test": "lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThriveCoin/thc-challenge-ui-api-js.git"
+  },
+  "keywords": [
+    "tch",
+    "challenge",
+    "ui"
+  ],
+  "author": "vigan.abd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThriveCoin/thc-challenge-ui-api-js/issues"
+  },
+  "homepage": "https://github.com/ThriveCoin/thc-challenge-ui-api-js#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "jwt-simple": "^0.5.6",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.0.5",
+    "mongoose-paginate": "^5.0.3",
+    "yargs": "^17.1.1"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
