@@ -1,5 +1,6 @@
 'use strict'
 
+const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const yargs = require('yargs')
@@ -21,6 +22,7 @@ const main = async () => {
     )
     await mongoose.connect(connStr)
 
+    app.use(cors())
     app.use(express.json({ strict: true }))
     app.use(routes)
     app.use(notFoundMiddleware)
