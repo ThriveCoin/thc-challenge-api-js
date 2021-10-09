@@ -46,7 +46,7 @@ class ProductController {
   async update (req, res, next) {
     try {
       const product = await ProductModel.findOne({
-        id: ObjectId(req.params.id),
+        _id: ObjectId(req.params.id),
         uid: req.user._id
       })
       if (!product) {
@@ -67,7 +67,7 @@ class ProductController {
         throw err
       }
 
-      await ProductModel.updateOne({ id: ObjectId(req.params.id) }, { $set: data })
+      await ProductModel.updateOne({ _id: ObjectId(req.params.id) }, { $set: data })
       return res.json(format({ _id: product._id, ...data }))
     } catch (err) {
       next(err)
@@ -77,7 +77,7 @@ class ProductController {
   async find (req, res, next) {
     try {
       const product = await ProductModel.findOne({
-        id: ObjectId(req.params.id),
+        _id: ObjectId(req.params.id),
         uid: req.user._id
       })
       if (!product) {
@@ -95,7 +95,7 @@ class ProductController {
   async remove (req, res, next) {
     try {
       const product = await ProductModel.findOne({
-        id: ObjectId(req.params.id),
+        _id: ObjectId(req.params.id),
         uid: req.user._id
       })
       if (!product) {
@@ -104,7 +104,7 @@ class ProductController {
         throw err
       }
 
-      await ProductModel.deleteOne({ id: ObjectId(req.params.id) })
+      await ProductModel.deleteOne({ _id: ObjectId(req.params.id) })
 
       return res.json(true)
     } catch (err) {
