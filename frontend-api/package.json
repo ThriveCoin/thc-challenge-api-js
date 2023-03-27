@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "standard",
     "format": "standard --fix",
+    "start": "node index.js --port 3030",
     "test": "lint"
   },
   "repository": {

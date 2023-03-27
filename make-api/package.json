@@ -1,0 +1,23 @@
+{
+  "name": "make-api",
+  "version": "1.0.0",
+  "description": "Make challenge api",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "format": "standard --fix",
+    "start": "node index.js --port 3031",
+    "test": "lint"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "yargs": "^17.7.1"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
+}
