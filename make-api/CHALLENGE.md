@@ -16,6 +16,7 @@ The purpose of this challenge is to implement a make scenario based on the requi
   - Amount of tokens
 - For checking matic balance you can use https://docs.polygonscan.com/ on testnet
 - Google sheet document id and sheet name should be fetched from Environment in data store that corresponds to current scenario
+- Scenario should have few operations executed, ideally 30, but at most 40 operations
 
 
 ## API Docs
