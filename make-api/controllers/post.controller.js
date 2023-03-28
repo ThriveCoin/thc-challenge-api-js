@@ -6,10 +6,11 @@ const db = require('../db')
 class PostController {
   posts (req, res, next) {
     try {
+      const now = Date.now()
       const since = +req.query.since
       const limit = +(req.query.limit || 20)
       const posts = _.cloneDeep(db.posts)
-        .filter(p => p.ts >= since).slice(0, limit)
+        .filter(p => now - p.ts >= since).slice(0, limit)
       return res.status(200).json(posts)
     } catch (err) {
       return next(err)
