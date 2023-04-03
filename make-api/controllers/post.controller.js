@@ -11,6 +11,7 @@ class PostController {
       const limit = +(req.query.limit || 20)
       const posts = _.cloneDeep(db.posts)
         .filter(p => now - p.ts >= since).slice(0, limit)
+        .map(p => ({ ...p, ts: now - p.ts }))
       return res.status(200).json(posts)
     } catch (err) {
       return next(err)
